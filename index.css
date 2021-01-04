@@ -1,0 +1,126 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    outline: none;
+}
+
+@font-face{
+    font-family: Roboto;
+    src: url(./assests/Roboto-Thin.ttf)
+}
+.column {
+    display: flex;
+    flex-direction: column;
+}
+.row {
+    display: flex;
+}
+.word {
+    font-family: Roboto;
+}
+
+#header1 {
+    display: flex;
+    justify-content: center;
+    background-color: #FDDC5C;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 50px 0px 20px 0px;
+}
+.i{
+    height: 70px;
+    width: 85px;
+}
+.i:nth-child(2) {
+    margin-top: 20px;
+}
+
+#header2 {
+    display: flex;
+    justify-content: center;
+    background-color: #BDF6FE;
+    font-size: 20px;
+    padding: 10px;
+}
+
+#container {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    justify-content: space-between;
+}
+.members {
+    border: 3px solid #868686;
+    height: 40px;
+    width: 300px;
+    border-radius: 8px;
+    font-size: 14pt;
+    text-indent: 10px;
+    margin-bottom: 10px;
+}
+.newMemberContainer {
+    background-color: #E0E0E0;
+    height: 40px;
+    width: 275px;
+    border-radius: 20px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 15px 0px 15px;
+}
+.newMemberContainer:hover {
+    background-color: #a5a5a5;
+    transition: 0.7s;
+}
+.plus {
+    height: 20px;
+    width: 20px;
+}
+#btnQtd {
+    margin-top: 10px;
+}
+#btnQtd > button {
+    height: 50px;
+    width: 50px;
+}
+.subtract {
+    background-color: black;
+    border-radius: 10px;
+    height: 5px;
+    width: 25px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#btnQtd > input {
+    margin: 0px 10px 0px 10px;
+    text-align: center;
+    height: 50px;
+    width: 70px;
+    border: none;
+    font-size: 30pt;
+}
+
+#generate {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    background-color: #E0E0E0;
+    justify-content: space-evenly;
+    font-size: 18pt;
+    align-items: center;
+    cursor: pointer;
+}
+#generate:hover {
+    background-color: #a5a5a5;
+    transition: 0.7s;
+}
+#generate > img {
+    height: 20px;
+    width: 20px;
+}
