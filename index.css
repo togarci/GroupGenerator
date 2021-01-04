@@ -44,6 +44,7 @@
 }
 
 #container {
+    position: relative;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -130,4 +131,16 @@
 }
 .containerInput {
     align-items: center;
+    animation-duration: 1s;
+    animation-name: slidein;
+}
+@keyframes slidein {
+    from {
+        opacity: 0;
+        margin-left: -40px;
+    }
+    to {
+        opacity: 1;
+        margin-left: 0px;
+    }
 }
