@@ -6,6 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <link rel="stylesheet" href="index.css">
         <script src="./index.js"></script>
+        <script src="./toasted.js"></script>
         <title>Group Generator</title>
         <link rel="icon" type="imagem/png" href="./assests/user-friends-solid.png"/>
     </head>
@@ -21,24 +22,26 @@
         </header>
         <section id="container" class="row">
             <div class="column">
-                <input type="text" placeholder="Name" class="members word">
+                <div id='key-0' class="row containerInput">
+                    <input type="text" placeholder="Name" class="members word">
+                </div>
                 <div class="newMemberContainer row" onclick="addName()">
                     <p class="word">Add name</p>
-                    <img src="./assests/plus-solid.png" class="plus">
+                    <img src="./assests/plus-solid.png" class="plus icon">
                 </div>
             </div>
             <div class="column">
                 <p class="word">N° of members</p>
                 <div id="btnQtd" class="row">
-                    <button><div class="subtract"></div></button>
-                    <input type="text" value="2" class="word">
-                    <button><img src="./assests/plus-solid.png" class="plus"></button>
+                    <button onclick="changeNumberMember(-1)"><div class="subtract"></div></button>
+                    <input id='Number' type="text" value="2" class="word">
+                    <button onclick="changeNumberMember(1)"><img src="./assests/plus-solid.png" class="plus icon"></button>
                 </div>
             </div>
         </section>
-        <button id="generate" class="row word">
+        <button id="generate" onclick="generateGroup()" class="row word">
             Let's go 
-            <img src="./assests/random-solid.svg">
+            <img src="./assests/random-solid.svg" class="icon">
         </button>
     </body>
 </html>

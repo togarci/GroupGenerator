@@ -73,10 +73,6 @@
     background-color: #a5a5a5;
     transition: 0.7s;
 }
-.plus {
-    height: 20px;
-    width: 20px;
-}
 #btnQtd {
     margin-top: 10px;
 }
@@ -120,7 +116,18 @@
     background-color: #a5a5a5;
     transition: 0.7s;
 }
-#generate > img {
+
+.icon {
     height: 20px;
     width: 20px;
+}
+.remove {
+    height: 30px;
+    width: 20px;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+.containerInput {
+    align-items: center;
 }
