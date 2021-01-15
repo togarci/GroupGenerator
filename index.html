@@ -23,9 +23,9 @@
         <section id="container" class="row">
             <div class="column">
                 <div id='key-0' class="row containerInput">
-                    <input type="text" placeholder="Name" class="members word">
+                    <input type="text" placeholder="Name" onkeypress="this.style.borderColor = '#a5a5a5'" class="members word">
                 </div>
-                <div class="newMemberContainer row" onclick="addName()">
+                <div class="newMemberContainer row" onclick="addName()" onsubmit="addName()">
                     <p class="word">Add name</p>
                     <img src="./assests/plus-solid.png" class="plus icon">
                 </div>
@@ -39,9 +39,16 @@
                 </div>
             </div>
         </section>
-        <button id="generate" onclick="generateGroup()" class="row word">
-            Let's go 
-            <img src="./assests/random-solid.svg" class="icon">
-        </button>
+        <div id="btnContainer" class="row">
+            <button onclick="generateGroup()" class="row word btnModel">
+                Let's go
+                <img src="./assests/random-solid.svg" class="icon">
+            </button>
+            <button type="button" onclick="window.location.reload()" class="row word btnModel" name="button">
+                <img src="./assests/arrow-left-solid.svg" class="icon">
+                Back
+            </button>
+        </div>
+        <div id='groupContainer'></div>
     </body>
 </html>

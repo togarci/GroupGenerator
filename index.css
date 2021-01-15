@@ -1,9 +1,9 @@
+/* General */
 * {
     padding: 0px;
     margin: 0px;
     outline: none;
 }
-
 @font-face{
     font-family: Roboto;
     src: url(./assests/Roboto-Thin.ttf)
@@ -18,7 +18,28 @@
 .word {
     font-family: Roboto;
 }
+@keyframes slidein {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes slideinY {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
 
+/* Hearder */
 #header1 {
     display: flex;
     justify-content: center;
@@ -43,6 +64,7 @@
     padding: 10px;
 }
 
+/* Container */
 #container {
     position: relative;
     width: 80%;
@@ -50,6 +72,7 @@
     margin-right: auto;
     margin-top: 50px;
     justify-content: space-between;
+    transition: transform 1s, opacity 1s;
 }
 .members {
     border: 3px solid #868686;
@@ -74,6 +97,27 @@
     background-color: #a5a5a5;
     transition: 0.7s;
 }
+
+/* Inputs */
+.icon {
+    height: 20px;
+    width: 20px;
+}
+.remove {
+    height: 30px;
+    width: 20px;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+.containerInput {
+    align-items: center;
+    animation-duration: 1s;
+    animation-name: slidein;
+}
+
+
+/* Buttons Qtd */
 #btnQtd {
     margin-top: 10px;
 }
@@ -98,11 +142,18 @@
     font-size: 30pt;
 }
 
-#generate {
+/* Button Generate */
+#btnContainer{
+    width: 40%;
+    justify-content: space-around;
+    flex-wrap: wrap;
     margin-top: 70px;
     margin-bottom: 70px;
     margin-left: auto;
     margin-right: auto;
+    transition: transform 1s, opacity 1s;
+}
+.btnModel {
     width: 200px;
     height: 40px;
     border: none;
@@ -113,34 +164,34 @@
     align-items: center;
     cursor: pointer;
 }
-#generate:hover {
+.btnModel:hover {
     background-color: #a5a5a5;
     transition: 0.7s;
 }
-
-.icon {
-    height: 20px;
-    width: 20px;
-}
-.remove {
-    height: 30px;
-    width: 20px;
-    cursor: pointer;
-    margin-left: 20px;
-    margin-bottom: 10px;
-}
-.containerInput {
-    align-items: center;
+.btnModel:last-child {
+    display: none;
     animation-duration: 1s;
     animation-name: slidein;
 }
-@keyframes slidein {
-    from {
-        opacity: 0;
-        margin-left: -40px;
-    }
-    to {
-        opacity: 1;
-        margin-left: 0px;
-    }
+
+
+/* Div groups */
+#groupContainer {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.modelGroupsCard {
+    font-family: Roboto;
+    font-weight: bolder;
+    font-size: 14pt;
+    border-radius: 15px;
+    width: 350px;
+    padding: 20px;
+    margin: 20px;
+    animation-duration: 1s;
+    animation-name: slideinY;
 }
