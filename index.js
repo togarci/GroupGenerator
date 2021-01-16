@@ -31,17 +31,18 @@ function removeInput(index) {
 }
 
 function outContainerAnimation() {
-    if(document.querySelectorAll('.modelGroupsCard').length < 1) {
-        var container = document.querySelector('#container');
-        var btnContainer  = document.querySelector('#btnContainer');
-        var groupContainer = document.querySelector('#groupContainer');
+    var container = document.querySelector('#container');
+    var btnContainer  = document.querySelector('#btnContainer');
+    var groupContainer = document.querySelector('#groupContainer');
 
+    groupContainer.innerHTML = '';
+    if(document.querySelectorAll('.modelGroupsCard').length < 1) {
         container.style.transform = `translateY(-${parseInt(document.querySelector('body').clientHeight - 541)}px)`;
         btnContainer.style.transform = `translateY(-${parseInt(document.querySelector('body').clientHeight - 401)}px)`;
         groupContainer.style.transform = `translateY(-${parseInt(document.querySelector('body').clientHeight - 361)}px)`;
-        groupContainer.innerHTML = '';
         container.style.opacity = 0;
     }
+
 }
 
 function innerDivGroupsOnHTML(groups) {
