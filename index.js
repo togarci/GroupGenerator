@@ -31,15 +31,17 @@ function removeInput(index) {
 }
 
 function outContainerAnimation() {
-    var container = document.querySelector('#container');
-    var btnContainer  = document.querySelector('#btnContainer');
-    var groupContainer = document.querySelector('#groupContainer');
+    if(document.querySelectorAll('.modelGroupsCard').length < 1) {
+        var container = document.querySelector('#container');
+        var btnContainer  = document.querySelector('#btnContainer');
+        var groupContainer = document.querySelector('#groupContainer');
 
-    container.style.transform = `translateY(-${parseInt(document.querySelector('body').clientHeight - 541)}px)`;
-    btnContainer.style.transform = `translateY(-${parseInt(document.querySelector('body').clientHeight - 401)}px)`;
-    groupContainer.style.transform = `translateY(-${parseInt(document.querySelector('body').clientHeight - 361)}px)`;
-    groupContainer.innerHTML = '';
-    container.style.opacity = 0;
+        container.style.transform = `translateY(-${parseInt(document.querySelector('body').clientHeight - 541)}px)`;
+        btnContainer.style.transform = `translateY(-${parseInt(document.querySelector('body').clientHeight - 401)}px)`;
+        groupContainer.style.transform = `translateY(-${parseInt(document.querySelector('body').clientHeight - 361)}px)`;
+        groupContainer.innerHTML = '';
+        container.style.opacity = 0;
+    }
 }
 
 function innerDivGroupsOnHTML(groups) {
