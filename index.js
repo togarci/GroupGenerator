@@ -47,10 +47,12 @@ function outContainerAnimation() {
 
 function innerDivGroupsOnHTML(groups) {
     let colors = ['#FDDC5C', '#BDF6FE'];
+    let groupContainer = document.querySelector('#groupContainer');
+        groupContainer.innerHTML = '';
+        
     for(group in groups) {
         let color = colors[group % 2];
-        let groupContainer = document.querySelector('#groupContainer');
-            groupContainer.insertAdjacentHTML('beforeend', `<div class="modelGroupsCard"></div>`);
+        groupContainer.insertAdjacentHTML('beforeend', `<div class="modelGroupsCard"></div>`);
 
         let groupCard = document.querySelectorAll('.modelGroupsCard');
             groupCard[group].style.backgroundColor = color;
