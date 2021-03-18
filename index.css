@@ -101,9 +101,7 @@
     transition: 0.7s;
 }
 
-#qtd-container {
-    margin-top: 30px;
-}
+
 
 /* Inputs */
 .icon {
@@ -150,7 +148,7 @@
 }
 
 /* Button Generate */
-#btnContainer{
+#btnContainer {
     width: 550px;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -170,7 +168,6 @@
     font-size: 18pt;
     align-items: center;
     cursor: pointer;
-    margin-top: 10px;
 }
 .btnModel:hover {
     background-color: #a5a5a5;
@@ -205,8 +202,21 @@
     animation-name: slideinY;
 }
 
+@media(max-width: 600px) {
+    #qtd-container {
+        margin-top: 30px;
+    }
+}
+
 @media(max-width: 580px) {
     #btnContainer {
         width: 250px;
+    }
+}
+
+@media(max-width: 400px) {
+    #container {
+        width: 95%;
+        justify-content: center;
     }
 }
