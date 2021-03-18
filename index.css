@@ -14,6 +14,7 @@
 }
 .row {
     display: flex;
+    
 }
 .word {
     font-family: Roboto;
@@ -60,6 +61,7 @@
     display: flex;
     justify-content: center;
     background-color: #BDF6FE;
+    text-align: center;
     font-size: 20px;
     padding: 10px;
 }
@@ -67,6 +69,7 @@
 /* Container */
 #container {
     position: relative;
+    flex-wrap: wrap;
     width: 80%;
     margin-left: auto;
     margin-right: auto;
@@ -96,6 +99,10 @@
 .newMemberContainer:hover {
     background-color: #a5a5a5;
     transition: 0.7s;
+}
+
+#qtd-container {
+    margin-top: 30px;
 }
 
 /* Inputs */
@@ -144,7 +151,7 @@
 
 /* Button Generate */
 #btnContainer{
-    width: 40%;
+    width: 550px;
     justify-content: space-around;
     flex-wrap: wrap;
     margin-top: 70px;
@@ -154,7 +161,7 @@
     transition: transform 1s, opacity 1s;
 }
 .btnModel {
-    width: 200px;
+    width: 250px;
     height: 40px;
     border: none;
     border-radius: 20px;
@@ -163,6 +170,7 @@
     font-size: 18pt;
     align-items: center;
     cursor: pointer;
+    margin-top: 10px;
 }
 .btnModel:hover {
     background-color: #a5a5a5;
@@ -183,6 +191,7 @@
     width: 85%;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 .modelGroupsCard {
     font-family: Roboto;
@@ -194,4 +203,10 @@
     margin: 20px;
     animation-duration: 1s;
     animation-name: slideinY;
+}
+
+@media(max-width: 580px) {
+    #btnContainer {
+        width: 250px;
+    }
 }

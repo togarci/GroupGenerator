@@ -1,7 +1,7 @@
 function addName() {
     let index = document.querySelectorAll('.containerInput').length
     const inputModel = `<div id='key-${index}' class="row containerInput">
-                            <input type="text" placeholder="Name" onkeypress="this.style.borderColor = '#a5a5a5'" class="members word">
+                            <input type="text" placeholder="Nome" onkeypress="this.style.borderColor = '#a5a5a5'" class="members word">
                             <img src="./assests/times-solid.png" onclick="removeInput(${index})" class="remove">
                         </div>`;
     const input = document.querySelectorAll('.containerInput');
@@ -38,7 +38,7 @@ function outContainerAnimation() {
     groupContainer.innerHTML = '';
     if(document.querySelectorAll('.modelGroupsCard').length < 1) {
         container.style.transform = `translateY(-${parseInt(document.querySelector('body').clientHeight - 541)}px)`;
-        btnContainer.style.transform = `translateY(-${parseInt(document.querySelector('body').clientHeight - 401)}px)`;
+        btnContainer.style.transform = `translateY(-${parseInt(document.querySelector('body').clientHeight - 421)}px)`;
         groupContainer.style.transform = `translateY(-${parseInt(document.querySelector('body').clientHeight - 361)}px)`;
         container.style.opacity = 0;
     }
@@ -83,8 +83,8 @@ function generateGroup() {
     });
     let qtdGrp = document.querySelector('#Number').value;
 
-    if(valueMember.length < qtdGrp) {
-        setToasted(false, 'Do you need more members');
+    if(valueMember.length < Number(qtdGrp) + 1) {
+        setToasted(false, 'Insira mais pessoas');
     } else if(validateAllInput()) {
         let nGrps = valueMember.length == qtdGrp ? valueMember.length : Math.ceil(valueMember.length / qtdGrp);
 
@@ -107,6 +107,6 @@ function generateGroup() {
             document.querySelector('.btnModel:last-child').style.display = 'flex';
         }, 700);
     } else {
-        setToasted(false, 'Check all input fields to be continue');
+        setToasted(false, 'Todos os campos devem estar preenchidos');
     }
 }
