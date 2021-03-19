@@ -104,6 +104,7 @@ function generateGroup() {
         outContainerAnimation();
         setTimeout(() => {
             innerDivGroupsOnHTML(Groups);
+            document.querySelector('#btnContainer').style.justifyContent = 'space-around';
             document.querySelector('.btnModel:last-child').style.display = 'flex';
         }, 700);
     } else {

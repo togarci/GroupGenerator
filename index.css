@@ -150,7 +150,7 @@
 /* Button Generate */
 #btnContainer {
     width: 550px;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
     margin-top: 70px;
     margin-bottom: 70px;
